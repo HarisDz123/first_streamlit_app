@@ -1,4 +1,5 @@
 import streamlit
+import requests
 
 streamlit.title('My Parent New Healty Diner')
 streamlit.header('Breakfast Favourites')
@@ -19,7 +20,7 @@ streamlit.dataframe(fruits_to_show)
 
 streamlit.header('Fruityvice Fruit Advice!')
 
-import requests
+
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response.json())
 
